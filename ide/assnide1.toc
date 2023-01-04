@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Abstract}{1}{section.1}%
+\contentsline {section}{\numberline {2}source question given}{1}{section.2}%
+\contentsline {section}{\numberline {3}flipflop way of working}{1}{section.3}%
+\contentsline {section}{\numberline {4}Transition table}{1}{section.4}%
+\contentsline {section}{\numberline {5}Components}{1}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Arduino}{1}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Truth table for given K-map}{2}{section.6}%
+\contentsline {section}{\numberline {7}procedure}{2}{section.7}%
+\contentsline {section}{\numberline {8}equation by truth table}{2}{section.8}%
+\contentsline {section}{\numberline {9}Software}{2}{section.9}%
+\contentsline {section}{\numberline {10} circuit connections}{3}{section.10}%
+\contentsline {section}{\numberline {11}BooleanEquation}{3}{section.11}%

@@ -1,0 +1,49 @@
+
+#include<avr/io.h>
+//#include<uart.h>
+#include <util/delay.h>
+#include<stdbool.h> 
+bool X=0,Y=0,Z=0,A=0,B=0,C=0;
+volatile DDRB  = 0b00100111; //13, 8,9,10 as input
+
+ DDRD  = 0b00000000; //2&3&4 as output
+ PORTD = 0b00011100; //pulling up the inputs
+
+int main(void){
+//UART_Init(9600);
+
+
+// DDRB   |= 0x4F;
+  
+while(1)
+   {
+ 
+ 
+ 
+     
+  A = (PIND & (1<<PIND2)) == (0<<PIND2);
+  B= (PINB & (1<<PIND3)) == (0<<PIND3);
+  C= (PINB & (1<<PIND4)) == (0<<PIND4);
+  
+//  d= (PINB & (1<<PINB5)) == (0<<PINB5);
+ 
+   X=(A&&C)||(B&&(!C));
+   Y=((!A)&&C)||(B&&(!C));
+   Z=((!A)&&(!B))||(A&&B);
+   
+   
+   PORTB |= (X<<0);
+   PORTB |= (Y<<1);
+   PORTB |= (Y<<2);   
+ 
+  _delay_ms (1000);
+   
+    PORTB |= (1 << 5); 
+      _delay_ms (1000);
+   PORTB  |=  (0 <<5);
+  
+}
+  
+ return 0;
+  
+ }
