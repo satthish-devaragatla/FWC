@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+%\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{caption} 
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{commath}
+\usepackage{gensymb}
+\usepackage{array}
+\usepackage{amsmath}   % for having text in math mode
+\usepackage{listings}
+\lstset{
+  frame=single,
+  breaklines=true
+}
+  
+%Following 2 lines were added to remove the blank page at the beginning
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+%
+
+
+%New macro definitions
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+
+
+\begin{document}
+\begin{center}
+\title{\textbf{Vector Algebra}}
+\date{\vspace{-5ex}} %Not to print date automatically
+\maketitle
+\end{center}
+\setcounter{page}{1}
+\section{12$^{th}$ Maths - Exercise 10.2.14}
+
+\begin{enumerate}
+\item Show that the vector $\hat{i}+\hat{j}+\hat{k}$ is equally inclined to the axes OX, OY, and OZ
+\section{Solution}
+\begin{center}
+a=$1\hat{i}+1\hat{j}+1\hat{k}$\\
+\end{center}
+\begin{align}
+\text{Let } \vec{A} = \myvec{1\\1\\1}\\  
+\end{align}
+let $\vec{A}$ be the given vector
+The Directional vectors of $x,y$ and $z$ axes are given respectively 
+\begin{align}
+		\vec{b_1} =\myvec{1\\0\\0},\vec{b_2}=\myvec{0\\1\\0},\vec{b_3} =\myvec{0\\0\\1}
+\end{align}
+		The magnitudes for $\vec{A}$ and directional vectors $\vec{e_1},\vec{e_2},\vec{e_3}$ are
+	\begin{align}
+\norm{\vec{A}} =\sqrt{1^2+1^2+1^2}=\sqrt{3}\\,\norm{\vec{b_1}}=\sqrt{1^2+0^2+0^2}=\sqrt{1}\\ \norm{\vec{b_2}}=\sqrt{0^2+1^2+0^2}=\sqrt{1}\\
+\norm{\vec{b_3}}=\sqrt{0^2+0^2+1^2}=\sqrt{1}
+	\end{align}
+Let 
+\begin{align}
+	\cos\theta_i=\frac{\vec{A}^{T}\vec{b}}{\mydet{\vec{A}}\mydet{\vec{b}}}\\  
+\end{align}
+		So for different values of $\cos\theta_i$ the direction cosines of vector $\vec{A}$ are
+\begin{align}
+	\cos\theta_1 &=\frac{\myvec{1&1&1}\myvec{1\\0\\0}}{\sqrt{3}\sqrt{1}}=\frac{1}{\sqrt{3}}\\
+	\cos\theta_2 &=\frac{\myvec{1&1&1}\myvec{0\\1\\0}}{\sqrt{3}\sqrt{1}}=\frac{1}{\sqrt{3}}\\
+	\cos\theta_3 &=\frac{\myvec{1&1&1}\myvec{0\\0\\1}}{\sqrt{3}\sqrt{1}}=\frac{1}{\sqrt{3}}\\
+	\cos\theta_1=\cos\theta_2=\cos\theta_3=\frac{1}{\sqrt{3}}
+\end{align}
+Hence the given vectors equally inclined to axes OX,OY,OZ
+\end{enumerate}
+\end{document}
